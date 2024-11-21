@@ -14,6 +14,7 @@ if ! iptables -L > /dev/null 2>&1; then
   done
 fi
 
+/etc/init.d/nordvpn start
 while [ ! -S /run/nordvpn/nordvpnd.sock ] ; do
   sleep 1
 done
